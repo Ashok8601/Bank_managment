@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 350px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #00ffae;
+        }
+        p {
+            font-size: 14px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 20px;
+            font-size: 16px;
+            outline: none;
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        input[type="password"]::placeholder {
+            color: #bbb;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #00ffae;
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #00c787;
+        }
+        .new-user-btn {
+            margin-top: 15px;
+            display: inline-block;
+            padding: 10px 20px;
+            background: transparent;
+            border: 2px solid #00ffae;
+            border-radius: 8px;
+            color: #00ffae;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .new-user-btn:hover {
+            background: #00ffae;
+            color: #000;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #aaa;
+        }
+        .bank-icon {
+            font-size: 50px;
+            color: #00ffae;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bank-icon">🏦</div>
+        <h1>Welcome to MyBank</h1>
+        <p>Secure Banking System - Please enter your MPIN</p>
+        
+        <!-- MPIN Login Form -->
+        <form method="POST" action="/">
+            <input type="password" name="mpin" placeholder="Enter 6a-digit MPIN" required maxlength="6" minlength="6">
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- New User Button -->
+        <a href="/signup" class="new-user-btn">New User? Open Account</a>
+
+        <div class="footer">© 2025 MyBank | Secure & Trusted</div>
+    </div>
+</body>
+</html>
